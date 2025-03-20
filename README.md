@@ -88,7 +88,7 @@ ou
 docker pull pedroar9/fake-shop-desafio:v2
 ```
 
-🔗 **Link da imagem:** [DockerHub - pedroar9/fake-shop-desafio](https://hub.docker.com/repository/docker/pedroar9/fake-shop-desafio/)
+🔗 **Link da imagem:** [DockerHub - pedroar9/fake-shop-desafio](https://hub.docker.com/r/pedroar9/fake-shop-desafio)
 
 ---
 
