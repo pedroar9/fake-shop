@@ -11,6 +11,8 @@ O projeto foi criado para fins de estudo e demonstração de conceitos de desenv
 - 🐳 **Docker** - Para containerização da aplicação
 - ☸ **Kubernetes** - Para orquestração dos containers
 - 🐘 **PostgreSQL** - Banco de dados relacional
+- ---  
+
 
 ## 📂 Estrutura do Projeto
 ```
@@ -26,6 +28,7 @@ O projeto foi criado para fins de estudo e demonstração de conceitos de desenv
 │── Dockerfile                # Arquivo para criação da imagem Docker
 │── README.md                 # Documentação do projeto
 ```
+---  
 
 ## 📦 Como Executar o Projeto
 
@@ -48,6 +51,8 @@ docker run -p 5000:5000 fake-shop
 A aplicação estará rodando em:
 📍 http://localhost:5000
 
+---  
+
 ## ⚙️ Variáveis de Ambiente
 
 Para o funcionamento correto do projeto, defina as seguintes variáveis de ambiente:
@@ -60,10 +65,15 @@ Para o funcionamento correto do projeto, defina as seguintes variáveis de ambie
 | `DB_NAME`     | Nome do banco de dados PostgreSQL |
 | `DB_PORT`     | Porta de conexão com o banco de dados PostgreSQL |  
 
+---  
+
 
 🔄 Como Usar a API
 
 A API do Fake Shop está configurada para oferecer funcionalidades de um e-commerce, como gerenciamento de produtos e pedidos.
+
+---  
+
 
 🌍 Publicação no DockerHub
 
