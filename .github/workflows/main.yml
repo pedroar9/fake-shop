@@ -4,7 +4,6 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-
 jobs:
   CI:
     runs-on: ubuntu-latest
@@ -13,6 +12,7 @@ jobs:
      - run: echo "Executar o Docker Build"
      - run: echo "Enviar a imagem Docker para o DockerHub"
   CD:
+    needs: [CI]
     runs-on: ubuntu-latest
     steps:
      - run: echo "Obter RELEASE"
