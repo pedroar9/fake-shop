@@ -1,19 +1,19 @@
 name: CI-CD
 on:
   push: 
-    branches["main"]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Obter código"
-      - run: echo "Executar o Docker Build"
-      - run: echo "Enviar a imagem Docker para o DockerHub"
+     - run: echo "Obter código"
+     - run: echo "Executar o Docker Build"
+     - run: echo "Enviar a imagem Docker para o DockerHub"
   CD:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Obter RELEASE"
-      - run: echo "Configurar o kubeconfig"
-      - run: echo "Executar o apply"
+     - run: echo "Obter RELEASE"
+     - run: echo "Configurar o kubeconfig"
+     - run: echo "Executar o apply"
