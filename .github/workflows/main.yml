@@ -1,6 +1,6 @@
 name: CI-CD
 on:
-  push: 
+  push:
     branches: ["main"]
   workflow_dispatch:
 
@@ -8,17 +8,17 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-     - name: Obtendo o código
-       uses: actions/checkout@v4.2.2
-     - name: Login to Docker Hub
-       uses: docker/login-action@v3
-       with:
-         username: ${{ secrets.DOCKERHUB_USERNAME }}
-         password: ${{ secrets.DOCKERHUB_TOKEN }}
-     - name: Construcao e Envio da Imagem Docker
-       uses: docker/build-push-action@v6
-       with:
-          context: ./src 
+      - name: Obtendo o código
+        uses: actions/checkout@v4.2.2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Construcao e Envio da Imagem Docker
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src
           push: true
           file: ./src/Dockerfile
           tags: pedroar9/fake-shop-desafio:v${{ github.run_number }}
@@ -26,7 +26,6 @@ jobs:
     needs: [CI]
     runs-on: ubuntu-latest
     steps:
-     - run: echo "Obter RELEASE"
-     - run: echo "Configurar o kubeconfig"
-     - run: echo "Executar o apply"
-     
+      - run: echo "Obter RELEASE"
+      - run: echo "Configurar o kubeconfig"
+      - run: echo "Executar o apply"
