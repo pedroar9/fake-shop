@@ -33,14 +33,14 @@ jobs:
 
       - uses: azure/k8s-set-context@v4
         with:
-           method: kubeconfig
-           kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
+          method: kubeconfig
+          kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
 
       - uses: Azure/k8s-deploy@v5
         with:
           manifests: |
-              k8s/deployment.yaml
+            k8s/deployment.yaml
           images:  |
-              pedroar9/fake-shop-desafio:v${{ github.run_number }}
+            pedroar9/fake-shop-desafio:v${{ github.run_number }}
   
 
