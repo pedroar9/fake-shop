@@ -92,6 +92,23 @@ docker pull pedroar9/fake-shop-desafio:v2
 
 ---
 
+## 📦 CI/CD com GitHub Actions
+
+O projeto utiliza GitHub Actions para automação do processo de build, push da imagem Docker e deploy no Kubernetes na [Digital Ocean](https://www.digitalocean.com/).
+
+### 🏗 Processo de CI/CD
+1. **CI** (Integração Contínua):
+   - Faz o checkout do repositório
+   - Faz login no Docker Hub
+   - Constrói e envia a imagem Docker para o Docker Hub
+
+2. **CD** (Entrega Contínua):
+   - Obtém a imagem
+   - Configura o contexto do Kubernetes
+   - Atualiza o deployment no cluster Kubernetes
+
+---
+
 ## 👨‍💻 Autor
 
 **Pedro Assis**
