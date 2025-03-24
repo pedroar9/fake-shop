@@ -108,6 +108,17 @@ O projeto utiliza GitHub Actions para automação do processo de build, push da 
    - Atualiza o deployment no cluster Kubernetes
 
 ---
+### 🔑 Obtendo a Senha do Grafana
+Para acessar o painel do Grafana, você pode recuperar a senha do usuário admin usando o seguinte comando:
+
+
+```bash
+
+kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo maaMPA1FtfPZfE0KwrftEHV025Wnuv7WyYdm2R4t
+
+```
+
+---
 
 ## 👨‍💻 Autor
 
